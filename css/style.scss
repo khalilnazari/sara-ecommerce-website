@@ -124,7 +124,7 @@ button.white {
     @include transition_linear();
 }
 
-// ---------------------------------- Home ------------------------------------
+// ---------------------------------- Home page ------------------------------------
 .header {
     background-color: #e3e6f3;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.062);
@@ -434,5 +434,142 @@ button.white {
     }
 }
 
-// ---------------------------------- Main ------------------------------------
-// ---------------------------------- Footer ------------------------------------
+// new letter 
+.newsletter {
+    background-color: #060d2f;
+    color:white;
+
+    &__container {
+        @include flex(0);
+        flex-wrap: wrap;
+        
+        // .box {
+        //     flex: 1 1 22rem;
+        // }
+
+        .newstext {
+            h4 {
+                font-size: 22px;
+                font-weight: 700;
+                color: #fff;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 600;
+                color: #818ea0;
+            }
+
+            span {
+                color: orange;
+            }
+        }
+
+        .form {
+            // display: flex;
+            // align-items: center;
+            // justify-content: right;
+            width: 40%;
+
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: right;
+                // width: 70%;
+            }
+
+            input {
+                height: 3.125rem;
+                padding: 0 1.25em;
+                font-size: 14px;
+                width: 100%;
+                border: 1px solid transparent;
+                outline: none;
+            }
+
+            input {
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+                // flex-grow: 1;
+            }
+            button {
+                color:white;
+                background-color: #088178;
+                white-space: nowrap;
+                height: 3.125rem;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+}
+
+// Footer
+footer {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 13px;
+            margin: 0 0 8px 0 !important;
+        }
+
+        a {
+            font-size: 13px;
+            margin-bottom: 10px;
+            color: #222;
+            transition: .3s linear;
+        }
+
+        i {
+            transition: .3s linear;
+        }
+
+        .follow {
+            margin-top: 20px;
+
+            i {
+                color: #465b52;
+                padding-right: 4px;
+                cursor: pointer;
+            }
+        }
+
+        .install-app .row {
+            margin: 10px 0 15px 0;
+            img {
+                border: 1px solid #088178;
+                border-radius: 4px;
+            }
+        }
+        
+        a:hover, i:hover {
+            color: #088178;
+        }
+
+    }
+
+    .copyright {
+        text-align: center;
+        color: #222;
+    }
+}
+

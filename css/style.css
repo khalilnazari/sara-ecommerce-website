@@ -411,4 +411,132 @@ button.white {
   font-weight: 800;
   font-size: 15px;
 }
+
+.newsletter {
+  background-color: #060d2f;
+  color: white;
+}
+
+.newsletter__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.newsletter__container .newstext h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.newsletter__container .newstext p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #818ea0;
+}
+
+.newsletter__container .newstext span {
+  color: orange;
+}
+
+.newsletter__container .form {
+  width: 40%;
+}
+
+.newsletter__container .form form {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.newsletter__container .form input {
+  height: 3.125rem;
+  padding: 0 1.25em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.newsletter__container .form input {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.newsletter__container .form button {
+  color: white;
+  background-color: #088178;
+  white-space: nowrap;
+  height: 3.125rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .container .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .container .logo {
+  margin-bottom: 30px;
+}
+
+footer .container h4 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+footer .container p {
+  font-size: 13px;
+  margin: 0 0 8px 0 !important;
+}
+
+footer .container a {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #222;
+  transition: .3s linear;
+}
+
+footer .container i {
+  transition: .3s linear;
+}
+
+footer .container .follow {
+  margin-top: 20px;
+}
+
+footer .container .follow i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .container .install-app .row {
+  margin: 10px 0 15px 0;
+}
+
+footer .container .install-app .row img {
+  border: 1px solid #088178;
+  border-radius: 4px;
+}
+
+footer .container a:hover, footer .container i:hover {
+  color: #088178;
+}
+
+footer .copyright {
+  text-align: center;
+  color: #222;
+}
 /*# sourceMappingURL=style.css.map */
