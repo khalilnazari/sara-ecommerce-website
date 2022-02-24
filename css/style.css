@@ -100,7 +100,7 @@ button.white {
   z-index: 111111;
 }
 
-.nav {
+.header .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,30 +108,31 @@ button.white {
   padding: 20px 0;
 }
 
-.nav .navbar {
+.header .nav .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0;
+  transform: translateY(0);
 }
 
-.nav .navbar li {
+.header .nav .navbar li {
   padding: 0 20px;
   position: relative;
 }
 
-.nav .navbar li a {
+.header .nav .navbar li a {
   font-size: 16px;
   font-weight: 600;
   color: #1a1a1a;
   transition: .2s linear;
 }
 
-.nav .navbar li a:hover, .nav .navbar li a.active {
+.header .nav .navbar li a:hover, .header .nav .navbar li a.active {
   color: #088178;
 }
 
-.nav .navbar li a.active::after, .nav .navbar li a:hover::after {
+.header .nav .navbar li a.active::after, .header .nav .navbar li a:hover::after {
   content: "";
   width: 30px;
   height: 3px;
@@ -141,16 +142,23 @@ button.white {
   left: 20px;
 }
 
-.hero {
+.header .toggle_btn_wrapper {
+  display: none;
+}
+
+.home-hero {
   height: 90vh;
   width: 100%;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.hero .hero_container {
+.home-hero .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -159,15 +167,15 @@ button.white {
   flex-direction: column;
 }
 
-.hero .hero_container h4 {
+.home-hero .container h4 {
   padding-bottom: 15px;
 }
 
-.hero .hero_container h1 {
+.home-hero .container h1 {
   color: #088178;
 }
 
-.hero .hero_container button {
+.home-hero .container button {
   background-image: url("../images/button.png");
   background-color: transparent;
   background-repeat: no-repeat;
@@ -186,7 +194,6 @@ button.white {
 }
 
 .features .features_container .feature_box {
-  width: 170px;
   text-align: center;
   padding: 25px 15px;
   border: 1px solid #cce7d0;
@@ -417,7 +424,7 @@ button.white {
   color: white;
 }
 
-.newsletter__container {
+.newsletter .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -425,33 +432,33 @@ button.white {
   flex-wrap: wrap;
 }
 
-.newsletter__container .newstext h4 {
+.newsletter .container .newstext h4 {
   font-size: 22px;
   font-weight: 700;
   color: #fff;
 }
 
-.newsletter__container .newstext p {
+.newsletter .container .newstext p {
   font-size: 14px;
   font-weight: 600;
   color: #818ea0;
 }
 
-.newsletter__container .newstext span {
+.newsletter .container .newstext span {
   color: orange;
 }
 
-.newsletter__container .form {
+.newsletter .container .form {
   width: 40%;
 }
 
-.newsletter__container .form form {
+.newsletter .container .form form {
   display: flex;
   align-items: center;
   justify-content: right;
 }
 
-.newsletter__container .form input {
+.newsletter .container .form input {
   height: 3.125rem;
   padding: 0 1.25em;
   font-size: 14px;
@@ -460,12 +467,12 @@ button.white {
   outline: none;
 }
 
-.newsletter__container .form input {
+.newsletter .container .form input {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 
-.newsletter__container .form button {
+.newsletter .container .form button {
   color: white;
   background-color: #088178;
   white-space: nowrap;
@@ -538,5 +545,168 @@ footer .container a:hover, footer .container i:hover {
 footer .copyright {
   text-align: center;
   color: #222;
+}
+
+@media screen and (max-width: 700px) {
+  h2 {
+    font-size: 30px;
+  }
+  .header .nav .navbar {
+    background-color: #e3e6f3;
+    position: absolute;
+    top: -25rem;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    display: block;
+    transition: .2s linear;
+  }
+  .header .nav .navbar li {
+    padding: 1rem 0;
+  }
+  .header .nav .navbar li a.active::after, .header .nav .navbar li a:hover::after {
+    content: '';
+    width: 100%;
+    padding: 0;
+    left: 0;
+  }
+  .header .nav .navbar.show {
+    top: 4rem;
+  }
+  .header .toggle_btn_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .header .toggle_btn_wrapper i {
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .sm-banner-container {
+    display: block;
+  }
+  .sm-banner-container .card {
+    margin-bottom: 1rem;
+  }
+  .banner {
+    height: 27vh;
+  }
+  .banner .banner_container h4 {
+    color: white;
+    font-size: 11px;
+  }
+  .banner .banner_container h2 {
+    font-size: 13px;
+    margin: 0.5rem 0;
+  }
+  .banner .banner_container button {
+    padding: 7px 13px;
+  }
+  .features .features_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    grid-gap: 1rem;
+    grid-gap: .3rem;
+  }
+  .features .features_container .feature_box {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #cce7d0;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px rgba(99, 99, 99, 0.3);
+    transition: .2s linear;
+    margin: 2px 0;
+  }
+  .features .features_container .feature_box h6 {
+    display: inline-block;
+    padding: .4rem;
+    background-color: #ffc9fc;
+    line-height: 1;
+    color: #088178;
+    border-radius: 4px;
+  }
+  footer .container {
+    display: block;
+  }
+  footer .container .col {
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+  }
+  footer .container .logo {
+    margin-bottom: 30px;
+  }
+  footer .container h4 {
+    font-size: 14px;
+    margin: 30px 0 10px 0;
+  }
+  footer .container p {
+    font-size: 13px;
+    margin: 0 0 8px 0 !important;
+  }
+  footer .container a {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #222;
+    transition: .3s linear;
+    display: block;
+  }
+  footer .container i {
+    transition: .3s linear;
+  }
+  footer .container .follow {
+    margin-top: 20px;
+  }
+  footer .container .follow i {
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+  }
+  footer .container .install-app .row {
+    margin: 10px 0 15px 0;
+  }
+  footer .container .install-app .row img {
+    width: 45%;
+    border: 1px solid #088178;
+    border-radius: 4px;
+  }
+  footer .copyright p {
+    font-size: 11px;
+  }
+  .newsletter .container {
+    display: block;
+  }
+  .newsletter .container .newstext {
+    text-align: center;
+  }
+  .newsletter .container .newstext h4 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .newsletter .container .newstext p {
+    font-size: 12px;
+  }
+  .newsletter .container .form {
+    width: 100%;
+  }
+  .newsletter .container .form form {
+    display: block;
+    text-align: center;
+  }
+  .newsletter .container .form input {
+    padding: 7px 12px;
+    font-size: 12px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    outline: none;
+  }
+  .newsletter .container .form button {
+    margin-top: 2rem;
+    border-radius: 3px;
+    padding: 7px 15px;
+    background-color: red;
+    height: 32px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

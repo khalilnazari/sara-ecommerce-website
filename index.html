@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- custome style -->
     <link rel="stylesheet" href="./css/style.css">
-    <title>Home</title>
+    <title></title>
 </head>
 <body>
     <!-- header -->
@@ -25,14 +25,29 @@
                 <li><a href="./pages/blog.html">Blog</a></li>
                 <li><a href="./pages/about.html">About</a></li>
                 <li><a href="./pages/contact.html">Contact</a></li>
-                <li><a href="./pages/cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li id="shoping_car">
+                    <a href="./pages/cart.html">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="toggle_btn_wrapper">
+                <li id="shoping_car">
+                    <a href="./pages/cart.html">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </li>
+                <li>
+                    <i class="fas fa-bars" id="navbar_toggle_btn"></i>
+                </li>
             </ul>
         </nav>
     </header>
 
     <!-- hero -->
-    <section class="hero section-p1" style="background-image: url('./images/hero4.png');">
-        <div class="container hero_container">
+    <section class="home-hero section-p1" style="background-image: url('./images/hero4.png');">
+        <div class="container">
             <h4>Trade-in-offer</h4>
             <h2>Super value deals</h2>
             <h1>On all products</h1>
@@ -430,7 +445,7 @@
 
     <!-- news letter -->
     <section class="newsletter section-p1">
-        <div class="container newsletter__container">
+        <div class="container">
             <div class="box newstext">
                 <h4>Sign up for Newsletter</h3>
                 <p>Get e-mail update about our lated update and <span>special offers</span></p>
