@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- custome style -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>Home</title>
+    <title></title>
 </head>
 <body>
     <!-- header -->
@@ -19,19 +19,40 @@
             </a>
             
             <ul class="navbar">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="../index.html" class="active">Home</a></li>
                 <li><a href="./shop.html">Shope</a></li>
                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li id="shoping-cart-lg">
+                    <a href="./pages/cart.html">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </li>
+                <i class="fa-solid fa-xmark" id="close_navbar_btn"></i>
+            </ul>
+
+            <ul class="toggle_btn_wrapper">
+                <li id="shoping_car">
+                    <a href="./pages/cart.html">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </li>
+                <li>
+                    <i class="fas fa-bars" id="navbar_toggle_btn"></i>
+                </li>
             </ul>
         </nav>
     </header>
 
 
-    <h1>shop page</h1>
+    <!-- =================== -->
 
+
+
+
+
+    
     <!-- Footer -->
     <footer class="section-p1">
         <div class="container">
@@ -89,6 +110,7 @@
             <p>&copy; 2022, corporate name all rights reserved.</p>
         </div>
     </footer>
+    
     <!-- custom script -->
     <script src="../js/script.js"></script>
 </body>

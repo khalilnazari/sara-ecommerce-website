@@ -17,3 +17,55 @@ if(url.includes('pages/shop')) {
 }
 
 
+// get screen width 
+// 1: 
+let mob_view = window.matchMedia("(max-width: 500px)"); 
+// 2: 
+let width = window.innerWidth; 
+
+window.addEventListener('resize', () => {
+    // if(mob_view.matches) {
+        window.innerWidth
+    // }
+    if(window.innerWidth <= 500){
+        console.log(window.innerWidth)
+    }
+})
+
+
+
+
+
+
+
+
+
+
+// Single product image slider
+const mainImage = document.getElementById("main-image"); 
+const smallImage = document.getElementsByClassName("small-image"); 
+console.log(smallImage)
+
+Array.from(smallImage).forEach(el => {
+    el.addEventListener('click', () => {
+        let imgSrc = el.getAttribute('src')
+        mainImage.setAttribute('src', imgSrc)
+    })
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
