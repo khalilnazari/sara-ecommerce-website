@@ -32,14 +32,7 @@ window.addEventListener('resize', () => {
     }
 })
 
-
-
-
-
-
-
-
-
+    
 
 // Single product image slider
 const mainImage = document.getElementById("main-image"); 
@@ -52,20 +45,3 @@ Array.from(smallImage).forEach(el => {
         mainImage.setAttribute('src', imgSrc)
     })
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
