@@ -45,3 +45,4 @@ Array.from(smallImage).forEach(el => {
         mainImage.setAttribute('src', imgSrc)
     })
 });
+
