@@ -166,7 +166,7 @@ button.white {
         
                     &.active::after, &:hover::after {
                         content: "";
-                        width: 30px;
+                        width: 30%;
                         height: 3px;
                         background-color: #088178;
                         position: absolute;
